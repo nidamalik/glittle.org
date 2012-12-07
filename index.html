@@ -116,17 +116,9 @@ function loadFragment(f) {
             loadFragment('music')
         }, 1000 * 60 * 20)
         
-               
         var c = $('.content')
-        
-        var div = document.createElement("div")        
-        var hrf = document.createElement('a');
-        hrf.href = "http://realgl.blogspot.com/2012/12/misc-lists.html"
-        hrf.innerHTML = 'music'
-        div.appendChild(hrf)
-         
         c.empty()
-        c.append(div)       
+        c.append('<div class="title">music</div>')
         var d = $('<div/>')
         c.append(d)
         
@@ -240,7 +232,7 @@ function loadSidebar() {
     lists.push("music")
     
     foreach(lists, function (e) {
-        d.append($('<div/>').append($('<a/>').attr('href', '#').text(e).click(function () {
+        d.append($('<div/>').append($('<a/>').attr('href', 'http://realgl.blogspot.com/2012/12/misc-lists.html').text(e).click(function () {
             loadFragment(e.replace(/ /g, '-'))
             return false
         })))
