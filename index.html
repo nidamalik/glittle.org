@@ -116,13 +116,17 @@ function loadFragment(f) {
             loadFragment('music')
         }, 1000 * 60 * 20)
         
-        var hrf1 = document.createElement('a');
-        hrf1.href = "http://realgl.blogspot.com/2012/12/misc-lists.html";
-                
+               
         var c = $('.content')
+        
+        var div = document.createElement("div")        
+        var hrf = document.createElement('a');
+        hrf.href = "http://realgl.blogspot.com/2012/12/misc-lists.html"
+        hrf.innerHTML = 'music'
+        div.appendChild(hrf)
+         
         c.empty()
-        c.append('<div class="title">music</div>')
-        c.appendChild(hrf1)
+        c.append(div)       
         var d = $('<div/>')
         c.append(d)
         
