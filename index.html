@@ -64,11 +64,11 @@ body {
 
 </head> 
 <body>
-<script src="/js/jquery.js"></script>
-<script src="/js/myutil.js"></script>
-<script src="/js/hashchange.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/myutil.js"></script>
+<script src="js/hashchange.js"></script>
 
-<script src="/odesk.js"></script>
+<script src="odesk.js"></script>
 
 <script src="data.js"></script>
 <script>
@@ -232,7 +232,7 @@ function loadSidebar() {
     lists.push("music")
     
     foreach(lists, function (e) {
-        d.append($('<div/>').append($('<a/>').attr('href', '#').text(e).click(function () {
+        d.append($('<div/>').append($('<a/>').attr('href', 'http://realgl.blogspot.com/2012/12/misc-lists.html').text(e).click(function () {
             loadFragment(e.replace(/ /g, '-'))
             return false
         })))
